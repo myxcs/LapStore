@@ -7,9 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.database.FirebaseDatabase;
+
 public class SplashScreen extends AppCompatActivity {
      Button Login, Register;
 
+    private FirebaseDatabase database;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +20,9 @@ public class SplashScreen extends AppCompatActivity {
         //adding button
         Login = findViewById(R.id.btn_login);
         Register = findViewById(R.id.btn_signup);
+        database = FirebaseDatabase.getInstance();
+        database.getReference().child("Users");
+
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override

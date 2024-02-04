@@ -29,7 +29,7 @@ public class RegisterScreen extends AppCompatActivity {
     private DatabaseReference reference;
     private UserModel userModel;
 
-    private EditText signupEmail, signupPassword, signupName, signupPhone;
+    private EditText signupEmail, signupPassword, signupConfirmPassword, signupName, signupPhone;
     private Button signupBtn;
     private TextView loginRedirectText;
     private ImageButton btnBack;
@@ -47,6 +47,7 @@ public class RegisterScreen extends AppCompatActivity {
         signupName = findViewById(R.id.ed_name);
         signupEmail = findViewById(R.id.ed_email);
         signupPassword = findViewById(R.id.ed_password);
+        signupConfirmPassword = findViewById(R.id.ed_confirm_password);
         signupPhone = findViewById(R.id.ed_phone);
         signupBtn = findViewById(R.id.btn_register);
         loginRedirectText = findViewById(R.id.tv_login);
@@ -106,15 +107,24 @@ public class RegisterScreen extends AppCompatActivity {
             signupPassword.setError("Mật khẩu ít nhất có 8 kí tự");
             return;
         }
+        if (TextUtils.isEmpty(userPhone)){
+            signupPhone.setError("Số điện thoại không điền");
+            return;
+        }
+        if (!userPass.equals(signupConfirmPassword.getText().toString())){
+          signupConfirmPassword.setError("Xác nhận mật khẩu không trùng");
+          return;
+        }
         else {
             auth.createUserWithEmailAndPassword(userMail, userPass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()) {
                         //   set data user lên firebase
-                        UserModel userModel = new UserModel(userName, userMail, userPhone, userPass,"",0,false);
+                        UserModel userModel = new UserModel(userName, userMail, userPhone, userPass,"nothingherenow",0,false);
                         String id = task.getResult().getUser().getUid();
-                        database.getReference().child("Users").child(String.valueOf(id)).setValue(userModel);
+                        database.getReference().child("Users").child(id).setValue(userModel);
+
 
                         //để push dữ liệu từng cái một, khá thú vị nên để lại
 //                        reference.child("User").child(String.valueOf(id)).setValue(userModel);
