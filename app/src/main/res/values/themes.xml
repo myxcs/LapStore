@@ -6,4 +6,5 @@
     </style>
 
     <style name="Theme.LapStore" parent="Base.Theme.LapStore" />
+
 </resources>

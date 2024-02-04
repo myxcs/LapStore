@@ -16,16 +16,16 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginScreen"
+            android:name=".HomeScreen"
             android:exported="false" />
         <activity
             android:name=".RegisterScreen"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".LoginScreen"
             android:exported="false" />
         <activity
-            android:name=".HomeScreen"
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
