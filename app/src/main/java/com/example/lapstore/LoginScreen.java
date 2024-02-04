@@ -91,7 +91,7 @@ public class LoginScreen extends AppCompatActivity {
                                     @Override
                                     public void onSuccess(AuthResult authResult) {
                                        // checkBanStatus();
-                                        Intent intent = new Intent(LoginScreen.this, MainActivity.class);
+                                        Intent intent = new Intent(LoginScreen.this, HomeScreen.class);
                                         startActivity(intent);
                                         finish();
                                         Toast.makeText(LoginScreen.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
