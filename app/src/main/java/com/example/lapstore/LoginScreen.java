@@ -38,6 +38,7 @@ public class LoginScreen extends AppCompatActivity {
     String remember;
     private Button btnLogin;
     private TextView signupRedirectText;
+    private ImageButton btBack;
     boolean banStatus;
     UserModel userModel = null;
 
@@ -55,6 +56,16 @@ public class LoginScreen extends AppCompatActivity {
        // rememberMe = findViewById(R.id.checkbox);
         btnLogin = findViewById(R.id.btn_login);
         signupRedirectText = findViewById(R.id.tv_register);
+        btBack = findViewById(R.id.bt_back);
+
+        btBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginScreen.this, SplashScreen.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
         //xem qua dữ liệu trong checkbox với SharedPreferences, oke thì cho đăng nhập luôn

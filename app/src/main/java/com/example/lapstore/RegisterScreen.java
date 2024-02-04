@@ -55,7 +55,7 @@ public class RegisterScreen extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RegisterScreen.this, LoginScreen.class);
+                Intent intent = new Intent(RegisterScreen.this, SplashScreen.class);
                 startActivity(intent);
             }
         });
