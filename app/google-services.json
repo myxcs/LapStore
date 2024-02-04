@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "164235508861",
+    "project_id": "lapstore-b902a",
+    "storage_bucket": "lapstore-b902a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164235508861:android:987482166d1a2e98a58514",
+        "android_client_info": {
+          "package_name": "com.example.lapstore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8jjjXGV7k3a9FLpP7bPdvhJoWb4_c0kI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
