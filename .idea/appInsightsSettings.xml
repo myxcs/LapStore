@@ -9,9 +9,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.example.lapstore" />
-                  <option name="mobileSdkAppId" value="1:164235508861:android:987482166d1a2e98a58514" />
-                  <option name="projectId" value="lapstore-b902a" />
-                  <option name="projectNumber" value="164235508861" />
+                  <option name="mobileSdkAppId" value="1:6275478124:android:b1bdfcb1a0287a95a11e49" />
+                  <option name="projectId" value="lapstoreus" />
+                  <option name="projectNumber" value="6275478124" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
