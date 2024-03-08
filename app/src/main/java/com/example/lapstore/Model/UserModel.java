@@ -2,15 +2,11 @@ package com.example.lapstore.Model;
 
 import java.io.Serializable;
 
-public class UserModel implements Serializable {
+public class UserModel {
     String name, email, phone, password;
     String profileImg;
     int money;
-
     boolean banStatus;
-
-    public UserModel() {
-    }
 
     public UserModel(String name, String email, String phone, String password, String profileImg, int money, boolean banStatus) {
         this.name = name;
@@ -20,6 +16,8 @@ public class UserModel implements Serializable {
         this.profileImg = profileImg;
         this.money = money;
         this.banStatus = banStatus;
+    }
+    public UserModel() {
     }
 
     public String getName() {

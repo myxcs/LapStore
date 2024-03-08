@@ -8,14 +8,16 @@
     <item
         android:id="@+id/navigation_dashboard"
         android:title="Dashboard"
-        android:icon="@drawable/ic_giohang" />
+        android:icon="@drawable/ic_cart" />
+
+    <item
+        android:id="@+id/navigation_account"
+        android:title="Account"
+        android:icon="@drawable/ic_person" />
 
     <item
         android:id="@+id/navigation_setting"
         android:title="Setting"
-        android:icon="@drawable/ic_person" />
-    <item
-        android:id="@+id/navigation_notifications"
-        android:title="Notifications"
-        android:icon="@drawable/ic_person" />
+        android:icon="@drawable/ic_account" />
+
 </menu>

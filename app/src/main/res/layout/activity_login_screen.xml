@@ -4,100 +4,127 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5F5F5"
     android:orientation="vertical"
-    android:background="#DFEFEE"
     tools:context=".LoginScreen">
-    <ImageButton
-        android:id="@+id/bt_back"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_back"
-        android:background="#DFEFEE"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        />
 
-    <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:src="@drawable/logo_lapstore"
-        android:scaleType="centerCrop"
-        android:layout_gravity="center" />
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#F5F5F5"
+        android:src="@drawable/ic_back" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="40dp">
+
+        <ImageButton
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:background="#F5F5F5"
+            android:src="@drawable/img_hi" />
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome Back!"
-        android:fontFamily="@font/poppins_medium"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="30dp"
+        android:text="Welcome Back!"
+        android:textSize="23sp"
+        android:textStyle="bold" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ed_email"
+                android:id="@+id/edtUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/edt_custom"
                 android:hint="Enter you email"
-                android:layout_marginHorizontal="20dp"
-                android:textSize="18sp"
-                android:background="@drawable/edt_custom"/>
+                android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ed_password"
+                android:id="@+id/edtPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/edt_custom"
                 android:hint="Confirm password"
-                android:layout_marginHorizontal="20dp"
-                android:textSize="18sp"
-                android:background="@drawable/edt_custom" />
+                android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_margin="20dp"
-            android:text="Forgot Password?"
-            android:fontFamily="@font/poppins_lightltalic"
-            android:textSize="17sp"
-            android:textColor="#00CAB1"
-            android:layout_gravity="center_horizontal"/>
+            android:text="Forget Password?"
+            android:textColor="#50C2C9"
+            android:textSize="18sp" />
 
         <Button
-            android:id="@+id/btn_login"
-            android:layout_width="200dp"
-            android:layout_gravity="center"
-            android:layout_height="50dp"
-            android:padding="10dp"
-            android:text="Login"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            android:textSize="15sp"
-            android:textColor="@color/white"
-            android:backgroundTint="#50C2C9" />
-
-        <TextView
-            android:id="@+id/tv_register"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/not_have_an_account_register"
-            android:textSize="17dp"
+            android:layout_marginTop="8dp"
             android:backgroundTint="#50C2C9"
-            android:layout_gravity="center_horizontal"/>
+            android:padding="12dp"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not have an account? "
+                android:textColor="@color/black"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Register"
+                android:textColor="#50C2C9"
+                android:textStyle="bold"
+                android:textSize="17dp" />
+
+        </LinearLayout>
 
 
+
+
+    </LinearLayout>
 </LinearLayout>
