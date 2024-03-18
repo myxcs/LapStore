@@ -16,6 +16,15 @@
         android:theme="@style/Theme.LapStore"
         tools:targetApi="31">
         <activity
+            android:name=".Statistics_screen"
+            android:exported="false" />
+        <activity
+            android:name=".Contact_manage_screen"
+            android:exported="false" />
+        <activity
+            android:name=".Acc_admin_screen"
+            android:exported="false" />
+        <activity
             android:name=".SettingScreen"
             android:exported="false" />
         <activity
