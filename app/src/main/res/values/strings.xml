@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">LapStore</string>
+    <string name="not_have_an_account_register">Don\'t have account yet?</string>
+    <string name="already_have_an_account_login">Already have account?</string>
 </resources>
